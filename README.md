@@ -15,14 +15,16 @@ Please set the Java-System-Property `burndown.data.dir` to the base-directory, w
 teams.xml
 ---------
 <pre>
-	<teams>
-		<team id="myteam1">
-			<teamSize>5</teamSize>
-			<regularSprintLength>10</regularSprintLength>
-			<regularSprintStart>3</regularSprintStart>
-			<name>The first team</name>
-		</team>
-	</teams>
+<code>
+	&lt;teams&gt;
+		&lt;team id=&quot;myteam1&quot;&gt;
+			&lt;teamSize&gt;5&lt;/teamSize&gt;
+			&lt;regularSprintLength&gt;10&lt;/regularSprintLength&gt;
+			&lt;regularSprintStart&gt;3&lt;/regularSprintStart&gt;
+			&lt;name&gt;The first team&lt;/name&gt;
+		&lt;/team&gt;
+	&lt;/teams&gt;
+</code>
 </pre>
 
 
@@ -37,22 +39,24 @@ Elements:
 jira-sync.xml
 ---------
 <pre>	
-	<jiraSync>
-		<baseUrl>http://my.jira.server</baseUrl>
-		<username>username</username>
-		<password>password</password>
-		<updateMode>FOUR_HOURLY</updateMode>
+<code>
+	&lt;jiraSync&gt;
+		&lt;baseUrl&gt;http://my.jira.server&lt;/baseUrl&gt;
+		&lt;username&gt;username&lt;/username&gt;
+		&lt;password&gt;password&lt;/password&gt;
+		&lt;updateMode&gt;FOUR_HOURLY&lt;/updateMode&gt;
 	
-		<teamSync teamId="myteam1">
-			<projectKey>JRA</projectKey>
-			<unplanned>true</unplanned>
-			<unplannedFlagFieldId>customfield_10600</unplannedFlagFieldId>
-			<unplannedFlagName>Unplanned</unplannedFlagName>
-			<effortMode>HOURS</effortMode>
-			<storyPointsFieldId></storyPointsFieldId>
-			<sprintVersionNameScheme>Sprint {0}</sprintVersionNameScheme>
-		</teamSync>
-	</jiraSync>
+		&lt;teamSync teamId=&quot;myteam1&quot;&gt;
+			&lt;projectKey&gt;JRA&lt;/projectKey&gt;
+			&lt;unplanned&gt;true&lt;/unplanned&gt;
+			&lt;unplannedFlagFieldId&gt;customfield_10600&lt;/unplannedFlagFieldId&gt;
+			&lt;unplannedFlagName&gt;Unplanned&lt;/unplannedFlagName&gt;
+			&lt;effortMode&gt;HOURS&lt;/effortMode&gt;
+			&lt;storyPointsFieldId&gt;&lt;/storyPointsFieldId&gt;
+			&lt;sprintVersionNameScheme&gt;Sprint {0}&lt;/sprintVersionNameScheme&gt;
+		&lt;/teamSync&gt;
+	&lt;/jiraSync&gt;
+</code>
 </pre>
 
 Elements:
