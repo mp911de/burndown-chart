@@ -14,8 +14,7 @@ Please set the Java-System-Property `burndown.data.dir` to the base-directory, w
 
 teams.xml
 ---------
-´<pre>
-	
+<pre>
 	<teams>
 		<team id="myteam1">
 			<teamSize>5</teamSize>
@@ -25,7 +24,7 @@ teams.xml
 		</team>
 	</teams>
 </pre>
-´
+
 
 Elements:
 * team/id: Team-Id. Used also to store local XML data
@@ -37,8 +36,7 @@ Elements:
 
 jira-sync.xml
 ---------
-´<pre>	
-	
+<pre>	
 	<jiraSync>
 		<baseUrl>http://my.jira.server</baseUrl>
 		<username>username</username>
@@ -55,7 +53,7 @@ jira-sync.xml
 			<sprintVersionNameScheme>Sprint {0}</sprintVersionNameScheme>
 		</teamSync>
 	</jiraSync>
-</pre>´
+</pre>
 
 Elements:
 * updateMode: OFF, HOURLY, FOUR_HOURLY, TWELVE_HOURLY, DAILY
