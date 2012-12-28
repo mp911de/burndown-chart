@@ -14,14 +14,18 @@ Please set the Java-System-Property `burndown.data.dir` to the base-directory, w
 
 teams.xml
 ---------
-´<teams>
-	<team id="myteam1">
-		<teamSize>5</teamSize>
-		<regularSprintLength>10</regularSprintLength>
-		<regularSprintStart>3</regularSprintStart>
-		<name>The first team</name>
-	</team>
-</teams>´
+´<pre>
+	
+	<teams>
+		<team id="myteam1">
+			<teamSize>5</teamSize>
+			<regularSprintLength>10</regularSprintLength>
+			<regularSprintStart>3</regularSprintStart>
+			<name>The first team</name>
+		</team>
+	</teams>
+</pre>
+´
 
 Elements:
 * team/id: Team-Id. Used also to store local XML data
@@ -33,22 +37,25 @@ Elements:
 
 jira-sync.xml
 ---------
-´<jiraSync>
-	<baseUrl>http://my.jira.server</baseUrl>
-	<username>username</username>
-	<password>password</password>
-	<updateMode>FOUR_HOURLY</updateMode>
-
-	<teamSync teamId="myteam1">
-		<projectKey>JRA</projectKey>
-		<unplanned>true</unplanned>
-		<unplannedFlagFieldId>customfield_10600</unplannedFlagFieldId>
-		<unplannedFlagName>Unplanned</unplannedFlagName>
-		<effortMode>HOURS</effortMode>
-		<storyPointsFieldId></storyPointsFieldId>
-		<sprintVersionNameScheme>Sprint {0}</sprintVersionNameScheme>
-	</teamSync>
-</jiraSync>´
+´<pre>	
+	
+	<jiraSync>
+		<baseUrl>http://my.jira.server</baseUrl>
+		<username>username</username>
+		<password>password</password>
+		<updateMode>FOUR_HOURLY</updateMode>
+	
+		<teamSync teamId="myteam1">
+			<projectKey>JRA</projectKey>
+			<unplanned>true</unplanned>
+			<unplannedFlagFieldId>customfield_10600</unplannedFlagFieldId>
+			<unplannedFlagName>Unplanned</unplannedFlagName>
+			<effortMode>HOURS</effortMode>
+			<storyPointsFieldId></storyPointsFieldId>
+			<sprintVersionNameScheme>Sprint {0}</sprintVersionNameScheme>
+		</teamSync>
+	</jiraSync>
+</pre>´
 
 Elements:
 * updateMode: OFF, HOURLY, FOUR_HOURLY, TWELVE_HOURLY, DAILY
