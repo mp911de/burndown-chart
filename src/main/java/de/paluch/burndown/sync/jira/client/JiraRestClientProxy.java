@@ -1,13 +1,9 @@
 package de.paluch.burndown.sync.jira.client;
 
-import javax.ws.rs.Consumes;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+
+import org.jboss.resteasy.client.ClientResponse;
 
 /**
  * Rest Client Proxy for Jira Rest API 2.0.alpha1. <br>
@@ -39,5 +35,10 @@ public interface JiraRestClientProxy {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public JiraRestSearchResult search(JiraRestSearchRequest jiraRestSearchRequest);
+
+    @Path("issuetype")
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public ClientResponse<String> performAuthentication(@HeaderParam("Authorization") String authorization);
 
 }

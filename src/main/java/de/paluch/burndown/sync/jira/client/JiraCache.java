@@ -14,7 +14,7 @@ public class JiraCache {
 
     private static JiraCache instance = new JiraCache();
 
-    private final Cache<String, JiraRestIssue> cache;
+    private final Cache<String, JiraRestIssue> issueCache;
 
     /**
      * 
@@ -22,7 +22,7 @@ public class JiraCache {
     @SuppressWarnings({ "unchecked", "rawtypes" })
     public JiraCache() {
 
-        cache = (Cache) CacheBuilder.newBuilder().maximumSize(100).expireAfterAccess(20, TimeUnit.MINUTES)
+        issueCache = (Cache) CacheBuilder.newBuilder().maximumSize(100).expireAfterAccess(20, TimeUnit.MINUTES)
                 .concurrencyLevel(2).build();
     }
 
@@ -40,7 +40,7 @@ public class JiraCache {
      */
     public JiraRestIssue getIssue(String issueKey, Callable<JiraRestIssue> loader) {
         try {
-            return cache.get(issueKey, loader);
+            return issueCache.get(issueKey, loader);
         } catch (ExecutionException e) {
             return null;
         }

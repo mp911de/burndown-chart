@@ -5,15 +5,11 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 
 /**
- * Sync config for a Team. <br>
- * <br>
- * Project: burdnown-chart <br>
- * Autor: mark <br>
- * Created: 25.03.2012 <br>
- * <br>
+ * Sync config for a Team. <br> <br> Project: burdnown-chart <br> Autor: mark <br> Created: 25.03.2012 <br> <br>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-public class JiraTeamSync {
+public class JiraTeamSync
+{
 
     @XmlAttribute
     private String teamId;
@@ -25,11 +21,13 @@ public class JiraTeamSync {
     private EffortMode effortMode;
     private String storyPointsFieldId;
     private String sprintVersionNameScheme;
+    private boolean rapidBoard;
 
     /**
      * @return the effortMode
      */
-    public EffortMode getEffortMode() {
+    public EffortMode getEffortMode()
+    {
 
         return effortMode;
     }
@@ -37,7 +35,8 @@ public class JiraTeamSync {
     /**
      * @return the projectKey
      */
-    public String getProjectKey() {
+    public String getProjectKey()
+    {
 
         return projectKey;
     }
@@ -45,7 +44,8 @@ public class JiraTeamSync {
     /**
      * @return the sprintVersionNameScheme
      */
-    public String getSprintVersionNameScheme() {
+    public String getSprintVersionNameScheme()
+    {
 
         return sprintVersionNameScheme;
     }
@@ -53,7 +53,8 @@ public class JiraTeamSync {
     /**
      * @return the storyPointsCustomField
      */
-    public String getStoryPointsFieldId() {
+    public String getStoryPointsFieldId()
+    {
 
         return storyPointsFieldId;
     }
@@ -61,7 +62,8 @@ public class JiraTeamSync {
     /**
      * @return the teamId
      */
-    public String getTeamId() {
+    public String getTeamId()
+    {
 
         return teamId;
     }
@@ -69,7 +71,8 @@ public class JiraTeamSync {
     /**
      * @return the unplannedFlagField
      */
-    public String getUnplannedFlagFieldId() {
+    public String getUnplannedFlagFieldId()
+    {
 
         return unplannedFlagFieldId;
     }
@@ -77,7 +80,8 @@ public class JiraTeamSync {
     /**
      * @return the unplannedFlagName
      */
-    public String getUnplannedFlagName() {
+    public String getUnplannedFlagName()
+    {
 
         return unplannedFlagName;
     }
@@ -85,93 +89,103 @@ public class JiraTeamSync {
     /**
      * @return the unplanned
      */
-    public boolean isUnplanned() {
+    public boolean isUnplanned()
+    {
 
         return unplanned;
     }
 
     /**
-     * @param effortMode
-     *            the effortMode to set
+     * @param effortMode the effortMode to set
      */
-    public void setEffortMode(EffortMode effortMode) {
+    public void setEffortMode(EffortMode effortMode)
+    {
 
         this.effortMode = effortMode;
     }
 
     /**
-     * @param projectKey
-     *            the projectKey to set
+     * @param projectKey the projectKey to set
      */
-    public void setProjectKey(String projectKey) {
+    public void setProjectKey(String projectKey)
+    {
 
         this.projectKey = projectKey;
     }
 
     /**
-     * @param sprintVersionNameScheme
-     *            the sprintVersionNameScheme to set
+     * @param sprintVersionNameScheme the sprintVersionNameScheme to set
      */
-    public void setSprintVersionNameScheme(String sprintVersionNameScheme) {
+    public void setSprintVersionNameScheme(String sprintVersionNameScheme)
+    {
 
         this.sprintVersionNameScheme = sprintVersionNameScheme;
     }
 
     /**
-     * @param storyPointsCustomField
-     *            the storyPointsCustomField to set
+     * @param storyPointsCustomField the storyPointsCustomField to set
      */
-    public void setStoryPointsFieldId(String storyPointsCustomField) {
+    public void setStoryPointsFieldId(String storyPointsCustomField)
+    {
 
         storyPointsFieldId = storyPointsCustomField;
     }
 
     /**
-     * @param teamId
-     *            the teamId to set
+     * @param teamId the teamId to set
      */
-    public void setTeamId(String teamId) {
+    public void setTeamId(String teamId)
+    {
 
         this.teamId = teamId;
     }
 
     /**
-     * @param unplanned
-     *            the unplanned to set
+     * @param unplanned the unplanned to set
      */
-    public void setUnplanned(boolean unplanned) {
+    public void setUnplanned(boolean unplanned)
+    {
 
         this.unplanned = unplanned;
     }
 
     /**
-     * @param unplannedFlagField
-     *            the unplannedFlagField to set
+     * @param unplannedFlagField the unplannedFlagField to set
      */
-    public void setUnplannedFlagFieldId(String unplannedFlagField) {
+    public void setUnplannedFlagFieldId(String unplannedFlagField)
+    {
 
         unplannedFlagFieldId = unplannedFlagField;
     }
 
     /**
-     * @param unplannedFlagName
-     *            the unplannedFlagName to set
+     * @param unplannedFlagName the unplannedFlagName to set
      */
-    public void setUnplannedFlagName(String unplannedFlagName) {
+    public void setUnplannedFlagName(String unplannedFlagName)
+    {
 
         this.unplannedFlagName = unplannedFlagName;
     }
 
+    public boolean isRapidBoard()
+    {
+        return rapidBoard;
+    }
+    public void setRapidBoard(boolean rapidBoard)
+    {
+        this.rapidBoard = rapidBoard;
+    }
     /**
      * @see java.lang.Object#toString()
      */
     @Override
-    public String toString() {
+    public String toString()
+    {
 
-        return getClass().getSimpleName() + " [teamId=" + teamId + ", projectKey=" + projectKey + ", unplanned="
-                + unplanned + ", unplannedFlagFieldId=" + unplannedFlagFieldId + ", unplannedFlagName="
-                + unplannedFlagName + ", effortMode=" + effortMode + ", storyPointsFieldId=" + storyPointsFieldId
-                + ", sprintVersionNameScheme=" + sprintVersionNameScheme + "]";
+        return getClass().getSimpleName() + " [teamId=" + teamId + ", projectKey=" + projectKey + ", unplanned=" +
+                unplanned + ", unplannedFlagFieldId=" + unplannedFlagFieldId + ", unplannedFlagName=" +
+                unplannedFlagName + ", effortMode=" + effortMode + ", storyPointsFieldId=" + storyPointsFieldId +
+                ", sprintVersionNameScheme=" + sprintVersionNameScheme + "]";
     }
 
 }

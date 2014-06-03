@@ -54,8 +54,8 @@ public class TeamsResource {
     @Produces("image/png")
     @Cache(maxAge = 1)
     public Response createChart(@PathParam("teamId") String teamId, @PathParam("sprintId") String sprintId,
-            @QueryParam("width") @DefaultValue("1024") int width,
-            @QueryParam("height") @DefaultValue("786") int height,
+            @QueryParam("width") @DefaultValue("1200") int width,
+            @QueryParam("height") @DefaultValue("720") int height,
             @QueryParam("multiplier") @DefaultValue("10") double multiplier) throws FontFormatException, IOException {
 
         double normalizedMultiplier = multiplier / 10;

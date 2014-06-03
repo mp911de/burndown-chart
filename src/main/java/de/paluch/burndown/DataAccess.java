@@ -2,11 +2,7 @@ package de.paluch.burndown;
 
 import java.io.File;
 import java.io.FilenameFilter;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 import javax.xml.bind.JAXB;
 
@@ -15,8 +11,7 @@ import de.paluch.burndown.model.Team;
 import de.paluch.burndown.model.Teams;
 
 /**
- * File-Based Sprint Data Accessor. You have to specify burndown.data.dir System-Property in order to use the Data
- * Accessor. <br>
+ * File-Based Sprint Data Accessor. You have to specify burndown.data.dir System-Property in order to use the Data Accessor. <br>
  * <br>
  * Project: burdnown-chart <br>
  * Autor: mark <br>
@@ -85,6 +80,13 @@ public class DataAccess {
                  */
                 @Override
                 public int compare(File o1, File o2) {
+
+                    Sprint s1 = JAXB.unmarshal(o1, Sprint.class);
+                    Sprint s2 = JAXB.unmarshal(o2, Sprint.class);
+
+                    if (true) {
+                        return s2.getStartDate().compareTo(s1.getStartDate());
+                    }
 
                     String name1 = o1.getName();
                     String name2 = o2.getName();
